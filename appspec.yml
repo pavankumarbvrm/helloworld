@@ -5,7 +5,7 @@ files:
     destination: /home/ubuntu/Projects/Proj1/
 hooks:
   BeforeInstall:
-    - location: scripts/install_dependencies
+    - location: install_dependencies.sh
       timeout: 300
 #    - location: scripts/start_server
 #      timeout: 300
