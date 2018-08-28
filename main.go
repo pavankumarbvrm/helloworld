@@ -1,11 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+	"net/http"
+)
 
-func helloworld() string {
-	return "Hello World!!"
+func HomeEndpoint(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(w, "Hello world :)")
 }
 
 func main() {
-	fmt.Println(helloworld())
+	http.HandleFunc("/", HomeEndpoint)
+	if err := http.ListenAndServe(":3000", nil); err != nil {
+		log.Fatal(err)
+	}
 }
