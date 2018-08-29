@@ -1,2 +1,4 @@
 #!/bin/bash
-service nginx start
+cd /home/ubuntu/Projects/Proj1
+go run main.go &
+service nginx restart
