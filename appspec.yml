@@ -4,6 +4,8 @@ files:
   - source: /
     destination: /home/ubuntu/Projects/Proj1
 hooks:
+  ApplicationStop:
+    - location: script/stop.sh
   BeforeInstall:
     - location: scripts/before_install.sh
       timeout: 300
@@ -12,3 +14,5 @@ hooks:
     - location: scripts/after_install.sh
       timeout: 300
       runas : ubuntu
+  ApplicationStart:
+    - location: script/start.sh
