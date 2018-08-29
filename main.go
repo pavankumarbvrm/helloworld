@@ -7,7 +7,7 @@ import (
 )
 
 func HomeEndpoint(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Hello world :) -working??")
+	fmt.Fprintln(w, "Hello world :) -working?? no??")
 }
 
 func main() {
